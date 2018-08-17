@@ -159,6 +159,10 @@ SectionVerb {
         # cset "name='OUT MIXR DAC R1 Switch' on"
         # cset "name='LOUT MIX OUTMIX L Switch' on"
         # cset "name='LOUT MIX OUTMIX R Switch' on"
+
+        # 47=0dB, 0.375 dB/step
+        cset "name='ADC Capture Volume' 47"
+        cset "name='ADC Capture Switch' on"
     ]
 
     DisableSequence [
@@ -318,9 +322,9 @@ SectionDevice."DMIC2" {
 }
 
 SectionDevice."HeadsetMic" {
-         Comment "Headset Mic"
+        Comment "Headset Mic"
 	 
-	 Value {
+	Value {
 		JackControl "Headset Mic Jack"
 		#FIXME CaptureControl "MIC2"
 	}
@@ -336,12 +340,8 @@ SectionDevice."HeadsetMic" {
 		cset "name='Headset Mic Switch' on"
         	cset "name='RECMIXL BST1 Switch' on"
 		cset "name='RECMIXR BST1 Switch' on"
-		cset "name='Mono ADC L1 Mux' ADC1"
-		cset "name='Mono ADC R1 Mux' ADC1"
-		cset "name='Mono ADC MIXL ADC2 Switch' off"
-       		cset "name='Mono ADC MIXR ADC2 Switch' off"
-        	cset "name='Mono ADC MIXL ADC1 Switch' on"
-       		cset "name='Mono ADC MIXR ADC1 Switch' on"
+		cset "name='Sto1 ADC MIXL ADC1 Switch' on"
+		cset "name='Sto1 ADC MIXR ADC1 Switch' on"
 	]
 
 	DisableSequence [
@@ -350,12 +350,8 @@ SectionDevice."HeadsetMic" {
 		cset "name='Headset Mic Switch' off"
         	cset "name='RECMIXL BST1 Switch' off"
 		cset "name='RECMIXR BST1 Switch' off"
-		cset "name='Mono ADC L1 Mux' ADC1"
-		cset "name='Mono ADC R1 Mux' ADC1"
-		cset "name='Mono ADC MIXL ADC2 Switch' on"
-       		cset "name='Mono ADC MIXR ADC2 Switch' on"
-        	cset "name='Mono ADC MIXL ADC1 Switch' off"
-       		cset "name='Mono ADC MIXR ADC1 Switch' off"
+		cset "name='Sto1 ADC MIXL ADC1 Switch' off"
+		cset "name='Sto1 ADC MIXR ADC1 Switch' off"
 	]
 
 	Value {
